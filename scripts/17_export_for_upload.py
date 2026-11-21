@@ -1,8 +1,8 @@
 """Create a clean export of the repository for GitHub's web uploader.
 
-Copies exactly the files that .gitignore would keep, into
-C:\\Users\\dika0625\\publish\\kazakh-profanity-detector, and refuses to run if the
-destination already exists (so a previous export is never silently overwritten).
+Copies exactly the files that .gitignore would keep into
+``~/publish/kazakh-profanity-detector`` (outside the project, so the export is never
+picked up by a later export), and refuses to run if the destination already exists.
 
     python scripts/17_export_for_upload.py
 """
