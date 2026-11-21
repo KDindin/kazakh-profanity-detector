@@ -1,0 +1,11 @@
+# Normalise line endings so the repo does not churn between Windows and Linux.
+* text=auto eol=lf
+
+# Binary artifacts must never be line-ending-converted.
+*.png binary
+*.joblib binary
+*.safetensors binary
+*.bin binary
+
+# Generated data is text, but keep it out of diffs.
+data/processed/*.jsonl text
