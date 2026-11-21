@@ -1,0 +1,260 @@
+{
+  "threshold_source": "validation split only",
+  "models": {
+    "baseline": {
+      "backend": "baseline",
+      "threshold_from_val": 0.5,
+      "val_f1_at_threshold": 0.9446,
+      "val": {
+        "n": 400,
+        "precision": 0.9846,
+        "recall": 0.9078,
+        "f1": 0.9446,
+        "accuracy": 0.9625,
+        "confusion_matrix": [
+          [
+            257,
+            2
+          ],
+          [
+            13,
+            128
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.9519    0.9923    0.9716       259\n           1     0.9846    0.9078    0.9446       141\n\n    accuracy                         0.9625       400\n   macro avg     0.9682    0.9500    0.9581       400\nweighted avg     0.9634    0.9625    0.9621       400\n"
+      },
+      "test": {
+        "n": 399,
+        "precision": 0.9545,
+        "recall": 0.9,
+        "f1": 0.9265,
+        "accuracy": 0.9499,
+        "confusion_matrix": [
+          [
+            253,
+            6
+          ],
+          [
+            14,
+            126
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.9476    0.9768    0.9620       259\n           1     0.9545    0.9000    0.9265       140\n\n    accuracy                         0.9499       399\n   macro avg     0.9511    0.9384    0.9442       399\nweighted avg     0.9500    0.9499    0.9495       399\n"
+      },
+      "test_real_only": {
+        "n": 343,
+        "precision": 0.963,
+        "recall": 0.8478,
+        "f1": 0.9017,
+        "accuracy": 0.9504,
+        "confusion_matrix": [
+          [
+            248,
+            3
+          ],
+          [
+            14,
+            78
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.9466    0.9880    0.9669       251\n           1     0.9630    0.8478    0.9017        92\n\n    accuracy                         0.9504       343\n   macro avg     0.9548    0.9179    0.9343       343\nweighted avg     0.9510    0.9504    0.9494       343\n"
+      },
+      "test_synthetic_only": {
+        "n": 56,
+        "precision": 0.9412,
+        "recall": 1.0,
+        "f1": 0.9697,
+        "accuracy": 0.9464,
+        "confusion_matrix": [
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            48
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     1.0000    0.6250    0.7692         8\n           1     0.9412    1.0000    0.9697        48\n\n    accuracy                         0.9464        56\n   macro avg     0.9706    0.8125    0.8695        56\nweighted avg     0.9496    0.9464    0.9411        56\n"
+      }
+    },
+    "transformer": {
+      "backend": "transformer",
+      "threshold_from_val": 0.54,
+      "val_f1_at_threshold": 0.9176,
+      "val": {
+        "n": 400,
+        "precision": 0.9275,
+        "recall": 0.9078,
+        "f1": 0.9176,
+        "accuracy": 0.9425,
+        "confusion_matrix": [
+          [
+            249,
+            10
+          ],
+          [
+            13,
+            128
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.9504    0.9614    0.9559       259\n           1     0.9275    0.9078    0.9176       141\n\n    accuracy                         0.9425       400\n   macro avg     0.9390    0.9346    0.9367       400\nweighted avg     0.9423    0.9425    0.9424       400\n"
+      },
+      "test": {
+        "n": 399,
+        "precision": 0.8944,
+        "recall": 0.9071,
+        "f1": 0.9007,
+        "accuracy": 0.9298,
+        "confusion_matrix": [
+          [
+            244,
+            15
+          ],
+          [
+            13,
+            127
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.9494    0.9421    0.9457       259\n           1     0.8944    0.9071    0.9007       140\n\n    accuracy                         0.9298       399\n   macro avg     0.9219    0.9246    0.9232       399\nweighted avg     0.9301    0.9298    0.9299       399\n"
+      },
+      "test_real_only": {
+        "n": 343,
+        "precision": 0.8696,
+        "recall": 0.8696,
+        "f1": 0.8696,
+        "accuracy": 0.93,
+        "confusion_matrix": [
+          [
+            239,
+            12
+          ],
+          [
+            12,
+            80
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.9522    0.9522    0.9522       251\n           1     0.8696    0.8696    0.8696        92\n\n    accuracy                         0.9300       343\n   macro avg     0.9109    0.9109    0.9109       343\nweighted avg     0.9300    0.9300    0.9300       343\n"
+      },
+      "test_synthetic_only": {
+        "n": 56,
+        "precision": 0.94,
+        "recall": 0.9792,
+        "f1": 0.9592,
+        "accuracy": 0.9286,
+        "confusion_matrix": [
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            47
+          ]
+        ],
+        "report": "              precision    recall  f1-score   support\n\n           0     0.8333    0.6250    0.7143         8\n           1     0.9400    0.9792    0.9592        48\n\n    accuracy                         0.9286        56\n   macro avg     0.8867    0.8021    0.8367        56\nweighted avg     0.9248    0.9286    0.9242        56\n"
+      }
+    }
+  },
+  "final_model": "baseline",
+  "threshold_table": [
+    {
+      "threshold": 0.2,
+      "precision": 0.7326,
+      "recall": 0.9786,
+      "f1": 0.8379,
+      "flagged": 187
+    },
+    {
+      "threshold": 0.25,
+      "precision": 0.7849,
+      "recall": 0.9643,
+      "f1": 0.8654,
+      "flagged": 172
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.8365,
+      "recall": 0.95,
+      "f1": 0.8896,
+      "flagged": 159
+    },
+    {
+      "threshold": 0.35,
+      "precision": 0.8784,
+      "recall": 0.9286,
+      "f1": 0.9028,
+      "flagged": 148
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.9214,
+      "recall": 0.9214,
+      "f1": 0.9214,
+      "flagged": 140
+    },
+    {
+      "threshold": 0.45,
+      "precision": 0.9407,
+      "recall": 0.9071,
+      "f1": 0.9236,
+      "flagged": 135
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.9545,
+      "recall": 0.9,
+      "f1": 0.9265,
+      "flagged": 132
+    },
+    {
+      "threshold": 0.55,
+      "precision": 0.9688,
+      "recall": 0.8857,
+      "f1": 0.9254,
+      "flagged": 128
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.9835,
+      "recall": 0.85,
+      "f1": 0.9119,
+      "flagged": 121
+    },
+    {
+      "threshold": 0.65,
+      "precision": 0.9832,
+      "recall": 0.8357,
+      "f1": 0.9035,
+      "flagged": 119
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.991,
+      "recall": 0.7857,
+      "f1": 0.8765,
+      "flagged": 111
+    },
+    {
+      "threshold": 0.75,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "flagged": 105
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "recall": 0.7071,
+      "f1": 0.8285,
+      "flagged": 99
+    },
+    {
+      "threshold": 0.85,
+      "precision": 1.0,
+      "recall": 0.6643,
+      "f1": 0.7983,
+      "flagged": 93
+    }
+  ]
+}

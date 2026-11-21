@@ -1,0 +1,9 @@
+{
+  "final_model": "baseline",
+  "threshold": 0.5,
+  "selection_rule": "highest F1 for class 1 on the validation split; if the two candidates are within 0.01, the smaller/faster model wins; test evaluated once afterwards",
+  "candidates": {
+    "baseline": 0.9446,
+    "transformer": 0.9176
+  }
+}

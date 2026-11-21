@@ -1,0 +1,55 @@
+{
+  "model": "kz-transformers/kaz-roberta-conversational",
+  "seed": 42,
+  "max_len": 128,
+  "head_tail": [
+    94,
+    32
+  ],
+  "epochs": 4,
+  "batch": 16,
+  "lr": 2e-05,
+  "weight_decay": 0.01,
+  "class_weights": [
+    0.7679027915000916,
+    1.4331742525100708
+  ],
+  "train_rows": 1201,
+  "epochs_log": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5933,
+      "val_f1_at_0.5": 0.806,
+      "val_best_f1": 0.8166,
+      "val_best_threshold": 0.4,
+      "elapsed_s": 337.7
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2738,
+      "val_f1_at_0.5": 0.8746,
+      "val_best_f1": 0.9051,
+      "val_best_threshold": 0.8,
+      "elapsed_s": 641.8
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1067,
+      "val_f1_at_0.5": 0.8927,
+      "val_best_f1": 0.9097,
+      "val_best_threshold": 0.85,
+      "elapsed_s": 1012.2
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.0506,
+      "val_f1_at_0.5": 0.9143,
+      "val_best_f1": 0.9176,
+      "val_best_threshold": 0.55,
+      "elapsed_s": 1350.3
+    }
+  ],
+  "best_val_f1": 0.9176,
+  "best_epoch": 4,
+  "train_seconds": 1351.4
+}

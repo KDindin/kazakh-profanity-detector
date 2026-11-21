@@ -1,0 +1,155 @@
+{
+  "generated_utc": "2026-11-21T05:04:37+00:00",
+  "python": "3.12.16",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "cpu_count": 18,
+  "kazprof_version": "0.1.0",
+  "packages": {
+    "numpy": "2.5.5",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "torch": "2.15.0+cpu",
+    "transformers": "5.23.0",
+    "matplotlib": "3.11.2",
+    "pytest": "9.2.0"
+  },
+  "random_seeds": {
+    "dataset_split": 42,
+    "synthetic_generation": 42,
+    "baseline": 42,
+    "transformer": 42
+  },
+  "dataset": {
+    "total": 2000,
+    "labels": {
+      "1": 700,
+      "0": 1300
+    },
+    "synthetic_rows": 282,
+    "splits": {
+      "train": 1201,
+      "val": 400,
+      "test": 399
+    },
+    "near_dup_threshold": 0.85,
+    "lexicon_terms": 20,
+    "lexicon_version": 2
+  },
+  "baseline": {
+    "model": "tfidf_word_char + logistic_regression",
+    "seed": 42,
+    "grid": [
+      {
+        "C": 0.5,
+        "threshold": 0.4800000000000001,
+        "val_f1": 0.9343
+      },
+      {
+        "C": 1.0,
+        "threshold": 0.49000000000000005,
+        "val_f1": 0.9373
+      },
+      {
+        "C": 2.0,
+        "threshold": 0.45000000000000007,
+        "val_f1": 0.9382
+      },
+      {
+        "C": 4.0,
+        "threshold": 0.5100000000000001,
+        "val_f1": 0.9442
+      },
+      {
+        "C": 8.0,
+        "threshold": 0.5000000000000001,
+        "val_f1": 0.9446
+      }
+    ],
+    "chosen": {
+      "C": 8.0,
+      "threshold": 0.5000000000000001
+    },
+    "val": {
+      "n": 400,
+      "precision": 0.9846,
+      "recall": 0.9078,
+      "f1": 0.9446,
+      "confusion_matrix": [
+        [
+          257,
+          2
+        ],
+        [
+          13,
+          128
+        ]
+      ],
+      "report": "              precision    recall  f1-score   support\n\n           0     0.9519    0.9923    0.9716       259\n           1     0.9846    0.9078    0.9446       141\n\n    accuracy                         0.9625       400\n   macro avg     0.9682    0.9500    0.9581       400\nweighted avg     0.9634    0.9625    0.9621       400\n"
+    }
+  },
+  "transformer": {
+    "model": "kz-transformers/kaz-roberta-conversational",
+    "seed": 42,
+    "max_len": 128,
+    "head_tail": [
+      94,
+      32
+    ],
+    "epochs": 4,
+    "batch": 16,
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "class_weights": [
+      0.7679027915000916,
+      1.4331742525100708
+    ],
+    "train_rows": 1201,
+    "epochs_log": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5933,
+        "val_f1_at_0.5": 0.806,
+        "val_best_f1": 0.8166,
+        "val_best_threshold": 0.4,
+        "elapsed_s": 337.7
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.2738,
+        "val_f1_at_0.5": 0.8746,
+        "val_best_f1": 0.9051,
+        "val_best_threshold": 0.8,
+        "elapsed_s": 641.8
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.1067,
+        "val_f1_at_0.5": 0.8927,
+        "val_best_f1": 0.9097,
+        "val_best_threshold": 0.85,
+        "elapsed_s": 1012.2
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.0506,
+        "val_f1_at_0.5": 0.9143,
+        "val_best_f1": 0.9176,
+        "val_best_threshold": 0.55,
+        "elapsed_s": 1350.3
+      }
+    ],
+    "best_val_f1": 0.9176,
+    "best_epoch": 4,
+    "train_seconds": 1351.4
+  },
+  "final_model": {
+    "final_model": "baseline",
+    "threshold": 0.5,
+    "selection_rule": "highest F1 for class 1 on the validation split; if the two candidates are within 0.01, the smaller/faster model wins; test evaluated once afterwards",
+    "candidates": {
+      "baseline": 0.9446,
+      "transformer": 0.9176
+    }
+  }
+}

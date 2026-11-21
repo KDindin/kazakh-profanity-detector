@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kazprof"
+version = "0.1.0"
+description = "Kazakh profanity detection for product reviews and comments"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "CC-BY-NC-SA-4.0" }
+dependencies = [
+    "numpy>=2.0",
+    "scikit-learn>=1.5",
+    "joblib>=1.4",
+    "huggingface-hub>=0.30",
+]
+
+[project.optional-dependencies]
+train = ["torch>=2.4", "transformers>=4.45"]
+plot = ["matplotlib>=3.8"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+kazprof = "kazprof.predict:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

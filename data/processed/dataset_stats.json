@@ -1,0 +1,64 @@
+{
+  "seed": 42,
+  "near_dup_threshold": 0.85,
+  "total": 2000,
+  "labels": {
+    "1": 700,
+    "0": 1300
+  },
+  "synthetic_rows": 282,
+  "synthetic_positives": 242,
+  "by_source": {
+    "telegram_kk": 1478,
+    "swear_sentences_seed": 15,
+    "synthetic_template": 282,
+    "2gis_reviews": 126,
+    "kaspi_reviews": 99
+  },
+  "by_lang": {
+    "kk": 1802,
+    "mixed": 198
+  },
+  "clusters": 1965,
+  "splits": {
+    "train": {
+      "rows": 1201,
+      "positives": 419,
+      "synthetic": 169,
+      "real_positives": 274,
+      "by_source": {
+        "telegram_kk": 894,
+        "synthetic_template": 169,
+        "2gis_reviews": 68,
+        "kaspi_reviews": 60,
+        "swear_sentences_seed": 10
+      }
+    },
+    "val": {
+      "rows": 400,
+      "positives": 141,
+      "synthetic": 57,
+      "real_positives": 92,
+      "by_source": {
+        "telegram_kk": 294,
+        "2gis_reviews": 31,
+        "synthetic_template": 57,
+        "kaspi_reviews": 15,
+        "swear_sentences_seed": 3
+      }
+    },
+    "test": {
+      "rows": 399,
+      "positives": 140,
+      "synthetic": 56,
+      "real_positives": 92,
+      "by_source": {
+        "telegram_kk": 290,
+        "synthetic_template": 56,
+        "kaspi_reviews": 24,
+        "2gis_reviews": 27,
+        "swear_sentences_seed": 2
+      }
+    }
+  }
+}

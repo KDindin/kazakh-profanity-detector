@@ -1,0 +1,10 @@
+# Python 3.12. Pinned to what the experiments were actually run with.
+numpy==2.5.5
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+datasets==5.2.0
+huggingface-hub==2.4.0
+# CPU wheels are enough: the model is 83M parameters.
+torch==2.15.0
+transformers==5.23.0

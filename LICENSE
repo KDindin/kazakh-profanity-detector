@@ -1,0 +1,25 @@
+CC BY-NC-SA 4.0 — Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+Copyright (c) 2026 the author of this repository.
+
+You are free to:
+  * Share — copy and redistribute the material in any medium or format
+  * Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  * Attribution — you must give appropriate credit, provide a link to the licence,
+    and indicate if changes were made.
+  * NonCommercial — you may not use the material (dataset, model, and the code that
+    produces them) for commercial purposes.
+  * ShareAlike — if you remix, transform, or build upon the material, you must
+    distribute your contributions under the same licence as the original.
+
+No warranties are given. The licence may not give you all of the permissions
+necessary for your intended use.
+
+Full legal text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Why this licence: the dataset is derived from a CC BY-NC-SA 4.0 Telegram corpus
+(see NOTICE.md), so the derived dataset and the model trained on it inherit the
+non-commercial and share-alike conditions. The code is released under the same
+terms to keep the repository internally consistent.

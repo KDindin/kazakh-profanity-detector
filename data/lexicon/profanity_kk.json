@@ -1,0 +1,151 @@
+{
+  "version": 2,
+  "description": "Kazakh profanity lexicon used for candidate mining and for the rule-based feature. Terms are matched against two normalised views of the text: 'norm' (word level, homoglyphs folded) and 'squash' (all non-letters removed, for obfuscated spellings). Patterns deliberately cover Kazakh spelling written in Russian orthography (сыгем, котинды, нахуй) because that is how most comments are actually typed.",
+  "terms": [
+    {
+      "id": "kk_kotak",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "[қк][оө]та[қғгк]",
+      "note": "core Kazakh obscenity, all inflections, both orthographies"
+    },
+    {
+      "id": "kk_kotak_bas",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "[қк][оө]та[қғгк]бас"
+    },
+    {
+      "id": "kk_am",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "\\bам(ыңды|ынды|ың|ын|ым|ы|ды|ға|да|нан|бас|шық|щелек|дар|дың)?\\b"
+    },
+    {
+      "id": "kk_sig",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "[сc][іиы]г(ейін|ейн|ейм|ейік|ем|еді|іл|у|іп|е)"
+    },
+    {
+      "id": "kk_bok",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "moderate",
+      "pattern": "\\bб[оө][қк](ты|қа|тан|та|тың)?\\b",
+      "note": "vulgar 'shit'; milder than kotak but still obscene"
+    },
+    {
+      "id": "kk_ket",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "moderate",
+      "pattern": "\\bк[өо]т(іңді|ыңды|инды|ынды|ің|ын|ин|ім|і|ке|тен|тер|тері)?\\b",
+      "note": "ass; obscene body-part reference used as an insult"
+    },
+    {
+      "id": "kk_zhalep",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "жәлеп"
+    },
+    {
+      "id": "kk_kanshyk",
+      "lang": "kk",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "[қк]аншы[қк]"
+    },
+    {
+      "id": "ru_huy",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "ху[йяеё]|хуи|хуйн|хуел|хуяр"
+    },
+    {
+      "id": "ru_nahuy",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "на[хк][уү]й|наху[йяе]"
+    },
+    {
+      "id": "ru_pizd",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "пизд|пзд|пизля"
+    },
+    {
+      "id": "ru_blya",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "бля[дт]?ь?|блә|бл\\*+[ьт]?"
+    },
+    {
+      "id": "ru_eb",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "еба[лтн]|ебёт|ебет|ебуч|ебан|ебу|ебись|заеб|уеб|наеб|отъеб|съеб|выеб|разъеб|долбоеб|долбаеб|далбаеб|далбаб|еблан|ёбан|ёбн|поёб|поеб"
+    },
+    {
+      "id": "ru_suka",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "moderate",
+      "pattern": "сук[аи]|сучк|сучий|сучон|с\\*+к[аи]"
+    },
+    {
+      "id": "ru_mudak",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "moderate",
+      "pattern": "муд[аео]|мудил"
+    },
+    {
+      "id": "ru_gondon",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "moderate",
+      "pattern": "гондон|гандон"
+    },
+    {
+      "id": "ru_zalup",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "залуп"
+    },
+    {
+      "id": "ru_droch",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "moderate",
+      "pattern": "дроч"
+    },
+    {
+      "id": "ru_shlyuh",
+      "lang": "ru",
+      "kind": "vulgar",
+      "severity": "severe",
+      "pattern": "шлюх"
+    },
+    {
+      "id": "ru_pidor",
+      "lang": "ru",
+      "kind": "slur",
+      "severity": "severe",
+      "pattern": "[пп][іие]д[оа]р|\\bпедик\\b",
+      "squash": false,
+      "note": "standalone педик only: педикюр (manicure) must not match"
+    }
+  ]
+}
