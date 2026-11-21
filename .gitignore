@@ -1,0 +1,22 @@
+# Download cache and raw corpora are never committed: they are large and contain
+# user-generated text that has not been masked yet.
+data/raw/
+data/interim/
+
+# Models are large; reproduce them with the training scripts.
+.models_cache/
+models/kazroberta_kk_profanity/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
