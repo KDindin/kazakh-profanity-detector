@@ -25,3 +25,9 @@ apply.
 
 Built with an AI coding agent (OpenCode / Claude). Section "AI assistance" in
 `README.md` states which parts were AI-authored and which were human decisions.
+
+## Licence text
+
+`LICENSE` contains the full legal code of CC BY-NC-SA 4.0. The licence applies to
+everything in this repository — the dataset, the trained model and the code — because
+the dataset is derived from a CC BY-NC-SA 4.0 source (see the table above).
